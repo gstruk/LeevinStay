@@ -152,7 +152,7 @@
       <span>Glandore House</span>
     </div>
     <div class="property" style="margin-top:2px;font-size:12px;opacity:.72">
-      <a class="map-link" href="https://maps.app.goo.gl/h7yf8JwPCYQX6nMS7" target="_blank" rel="noopener noreferrer" title="Open in Google Maps">
+      <a class="map-link" href="https://maps.app.goo.gl/AFEpkev3ZffHi7Vz6" target="_blank" rel="noopener noreferrer" title="Open in Google Maps">
         <img src="images/map.png" alt="Google Maps">
       </a>
       <span>- Cork, Ireland</span>
@@ -192,34 +192,34 @@ window.SCENE_IMAGES = {
   // ---- Estrutura da casa: ordem física real ----
   // yaw/pitch dos hotspots em radianos — ajuste fino conforme a foto
   var scenesData = [
-    { id:'front',   num:'01', title:'Front of the House', title_es:'Fachada', title_pt:'Fachada', floor:'Outside', img:IMG.front,
+    { id:'front',   num:'01', title:'Front of the House', title_es:'Fachada', title_pt:'Fachada', floor:'Outside', img:IMG.hall,
       hotspots:[ {target:'hall', label:'Enter', yaw:0.0, pitch:0.10} ] },
 
-    { id:'hall',    num:'02', title:'Entrance Hall', title_es:'Recibidor', title_pt:'Hall de entrada', floor:'Ground Floor', img:IMG.hall,
+    { id:'hall',    num:'02', title:'Entrance Hall', title_es:'Recibidor', title_pt:'Hall de entrada', floor:'Ground Floor', img:IMG.front,
       hotspots:[
         {target:'front',   label:'Out to the front', yaw:0.0, pitch:0.10},
         {target:'kitchen', label:'To the kitchen',   yaw:-1.6, pitch:0.05}
       ] },
 
-    { id:'kitchen', num:'03', title:'Kitchen & Living', title_es:'Cocina y sala', title_pt:'Cozinha e sala', floor:'Ground Floor', img:IMG.kitchen,
+    { id:'kitchen', num:'03', title:'Kitchen & Living', title_es:'Cocina y sala', title_pt:'Cozinha e sala', floor:'Ground Floor', img:IMG.laundry,
       hotspots:[
         {target:'hall',    label:'Back to the hall', yaw:2.6, pitch:0.05},
         {target:'laundry', label:'To the laundry',   yaw:0.4, pitch:0.05}
       ] },
 
-    { id:'laundry', num:'04', title:'Laundry', title_es:'Lavandería', title_pt:'Lavanderia', floor:'Ground Floor', img:IMG.laundry,
+    { id:'laundry', num:'04', title:'Laundry', title_es:'Lavandería', title_pt:'Lavanderia', floor:'Ground Floor', img:IMG.kitchen,
       hotspots:[
         {target:'kitchen', label:'Back to the kitchen', yaw:-2.4, pitch:0.05},
         {target:'garden',  label:'Out to the garden',   yaw:0.3, pitch:0.05}
       ] },
 
-    { id:'garden',  num:'05', title:'Garden', title_es:'Jardín', title_pt:'Jardim', floor:'Outside', img:IMG.garden,
+    { id:'garden',  num:'05', title:'Garden', title_es:'Jardín', title_pt:'Jardim', floor:'Outside', img:IMG.corridor,
       hotspots:[
         {target:'laundry',  label:'Back inside', yaw:-2.8, pitch:0.05},
         {target:'corridor', label:'Upstairs corridor', yaw:0.5, pitch:0.05}
       ] },
 
-    { id:'corridor',num:'06', title:'Corridor', title_es:'Pasillo', title_pt:'Corredor', floor:'First Floor', img:IMG.corridor,
+    { id:'corridor',num:'06', title:'Corridor', title_es:'Pasillo', title_pt:'Corredor', floor:'First Floor', img:IMG.garden,
       hotspots:[
         {target:'garden',   label:'Back to the garden', yaw:-2.6, pitch:0.05},
         {target:'toilet',   label:'To the toilet',      yaw:0.4, pitch:0.05}
