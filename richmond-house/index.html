@@ -313,8 +313,8 @@ window.SCENE_IMAGES = {
   });
 
   // esconde loader quando a primeira cena estiver pronta
-  scenes['entrada'].scene.switchTo();
-  switchTo('entrada');
+  scenes['street'].scene.switchTo();
+  switchTo('street');
   setTimeout(function(){
     var l=document.getElementById('loader'); l.style.opacity='0';
     setTimeout(function(){ l.style.display='none'; }, 500);
