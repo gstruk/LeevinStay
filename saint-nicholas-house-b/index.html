@@ -179,8 +179,8 @@ window.SCENE_IMAGES = {
   "rooms1415": "images/rooms1415.jpg",
   "stairs":    "images/stairs.jpg",
   "rooms1617": "images/rooms1617.jpg",
+  "bath3":     "images/bath3.jpg",
   "rooms1819": "images/rooms1819.jpg",
-  "bath_sf":   "images/bath_sf.jpg",
   "kitchen1":  "images/kitchen1.jpg",
   "kitchen2":  "images/kitchen2.jpg",
   "kitchen3":  "images/kitchen3.jpg"
@@ -211,32 +211,32 @@ window.SCENE_IMAGES = {
 
     { id:'stairs',    num:'04', title:'Stairs & Hall — First Floor', title_es:'Escalera y pasillo', title_pt:'Escada e hall', floor:'First Floor', img:IMG.stairs,
       hotspots:[
-        {target:'rooms1415', label:'Downstairs',        yaw:1.2, pitch:0.20},
-        {target:'rooms1617', label:'Rooms 16 & 17',     yaw:-1.5, pitch:0.05}
+        {target:'rooms1415', label:'Downstairs',    yaw:1.2, pitch:0.20},
+        {target:'rooms1617', label:'Rooms 16 & 17', yaw:-1.5, pitch:0.05}
       ] },
 
     { id:'rooms1617', num:'05', title:'Rooms 16 & 17 — Bathroom 2', title_es:'Habitaciones 16 y 17 — Baño 2', title_pt:'Quartos 16 e 17 — Banheiro 2', floor:'First Floor', img:IMG.rooms1617,
       hotspots:[
-        {target:'stairs',    label:'Back to the stairs', yaw:2.6, pitch:0.05},
-        {target:'rooms1819', label:'Rooms 18 & 19',      yaw:0.2, pitch:0.05}
+        {target:'stairs', label:'Back to the stairs', yaw:2.6, pitch:0.05},
+        {target:'bath3',  label:'Bathroom 3',         yaw:0.2, pitch:0.05}
       ] },
 
-    { id:'rooms1819', num:'06', title:'Rooms 18 & 19 — Corridor', title_es:'Habitaciones 18 y 19', title_pt:'Quartos 18 e 19', floor:'First Floor', img:IMG.rooms1819,
+    { id:'bath3',     num:'06', title:'Bathroom 3 — Corridor', title_es:'Baño 3 — pasillo', title_pt:'Banheiro 3 — corredor', floor:'First Floor', img:IMG.bath3,
       hotspots:[
         {target:'rooms1617', label:'Back to rooms 16 & 17', yaw:2.4, pitch:0.05},
-        {target:'bath_sf',   label:'To the bathroom',       yaw:0.2, pitch:0.05}
+        {target:'rooms1819', label:'Rooms 18 & 19',         yaw:0.2, pitch:0.05}
       ] },
 
-    { id:'bath_sf',   num:'07', title:'Bathroom 3 — Corridor', title_es:'Baño 3 — pasillo', title_pt:'Banheiro 3 — corredor', floor:'First Floor', img:IMG.bath_sf,
+    { id:'rooms1819', num:'07', title:'Rooms 18 & 19 — Corridor', title_es:'Habitaciones 18 y 19', title_pt:'Quartos 18 e 19', floor:'First Floor', img:IMG.rooms1819,
       hotspots:[
-        {target:'rooms1819', label:'Back to the corridor', yaw:2.4, pitch:0.05},
-        {target:'kitchen1',  label:'To the kitchen',       yaw:0.2, pitch:0.05}
+        {target:'bath3',    label:'Back to bathroom 3', yaw:2.4, pitch:0.05},
+        {target:'kitchen1', label:'To the kitchen',     yaw:0.2, pitch:0.05}
       ] },
 
     { id:'kitchen1',  num:'08', title:'Kitchen — Worktop & Table', title_es:'Cocina — encimera y mesa', title_pt:'Cozinha — bancada e mesa', floor:'First Floor', img:IMG.kitchen1,
       hotspots:[
-        {target:'bath_sf',  label:'Back to the bathroom', yaw:2.4, pitch:0.05},
-        {target:'kitchen2', label:'More of the kitchen',  yaw:0.4, pitch:0.05}
+        {target:'rooms1819', label:'Back to the corridor', yaw:2.4, pitch:0.05},
+        {target:'kitchen2',  label:'More of the kitchen',  yaw:0.4, pitch:0.05}
       ] },
 
     { id:'kitchen2',  num:'09', title:'Kitchen', title_es:'Cocina', title_pt:'Cozinha', floor:'First Floor', img:IMG.kitchen2,
