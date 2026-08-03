@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Leevin Stay Cork — Saint Nicholas | Tour 360°</title>
+<title>Leevin Stay Cork — Saint Nicholas House B | Tour 360°</title>
+<!-- URLs de preview já preenchidas para: https://gstruk.github.io/LeevinStay/saint-nicholas-house-b/ -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Saint Nicholas House B — 360° Virtual Tour">
 <meta property="og:description" content="Explore the house in 360° · Leevin Stay Cork">
@@ -151,7 +152,7 @@
       <span>Saint Nicholas House B</span>
     </div>
     <div class="property" style="margin-top:2px;font-size:12px;opacity:.72">
-      <a class="map-link" href="https://maps.app.goo.gl/h7yf8JwPCYQX6nMS7" target="_blank" rel="noopener noreferrer" title="Open in Google Maps">
+      <a class="map-link" href="https://www.google.com/maps/place/18+St.+Nicholas+Square,+Ballymacthomas,+Cork/@51.9029168,-8.4823116,35a,75y,298.93h,85.95t/data=!3m7!1e1!3m5!1sP2iavsa7MetUfn4oZshzuQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D4.047374374794202%26panoid%3DP2iavsa7MetUfn4oZshzuQ%26yaw%3D298.92518957490233!7i16384!8i8192!4m7!3m6!1s0x484490144bad9cdf:0xec0e8cf96741ab55!8m2!3d51.9030917!4d-8.4824547!10e5!16s%2Fg%2F11csj7jt8r?entry=tts" target="_blank" rel="noopener noreferrer" title="Open in Google Maps">
         <img src="images/map.png" alt="Google Maps">
       </a>
       <span>- Cork, Ireland</span>
@@ -173,12 +174,16 @@
 
 <script>
 window.SCENE_IMAGES = {
-  "entrada":  "images/entrada.jpg",
-  "hall":     "images/hall.jpg",
-  "escada":   "images/escada.jpg",
-  "cozinha1": "images/cozinha1.jpg",
-  "cozinha2": "images/cozinha2.jpg",
-  "corredor": "images/corredor.jpg"
+  "entrance":  "images/entrance.jpg",
+  "hall":      "images/hall.jpg",
+  "rooms1415": "images/rooms1415.jpg",
+  "stairs":    "images/stairs.jpg",
+  "rooms1617": "images/rooms1617.jpg",
+  "rooms1819": "images/rooms1819.jpg",
+  "bath_sf":   "images/bath_sf.jpg",
+  "kitchen1":  "images/kitchen1.jpg",
+  "kitchen2":  "images/kitchen2.jpg",
+  "kitchen3":  "images/kitchen3.jpg"
 };
 </script>
 <script>
@@ -189,36 +194,60 @@ window.SCENE_IMAGES = {
   // ---- Estrutura da casa: ordem física real ----
   // yaw/pitch dos hotspots em radianos — ajuste fino conforme a foto
   var scenesData = [
-    { id:'entrada',  num:'01', title:'Entrance', title_es:'Entrada', title_pt:'Entrada', floor:'Ground Floor', img:IMG.entrada,
-      hotspots:[ {target:'hall', label:'Enter', yaw:2.1, pitch:0.12} ] },
+    { id:'entrance',  num:'01', title:'Entrance', title_es:'Entrada', title_pt:'Entrada', floor:'Outside', img:IMG.entrance,
+      hotspots:[ {target:'hall', label:'Enter', yaw:0.0, pitch:0.12} ] },
 
-    { id:'hall',     num:'02', title:'Entrance Hall', title_es:'Recibidor', title_pt:'Hall de entrada', floor:'Ground Floor', img:IMG.hall,
+    { id:'hall',      num:'02', title:'Entrance Hall', title_es:'Recibidor', title_pt:'Hall de entrada', floor:'Ground Floor', img:IMG.hall,
       hotspots:[
-        {target:'entrada', label:'Out to the yard', yaw:1.4, pitch:0.10},
-        {target:'escada',  label:'Up the stairs',     yaw:-1.9, pitch:0.05}
+        {target:'entrance',  label:'Out to the yard',   yaw:1.4, pitch:0.10},
+        {target:'rooms1415', label:'Rooms 14 & 15',     yaw:-1.9, pitch:0.05}
       ] },
 
-    { id:'escada',   num:'03', title:'Staircase', title_es:'Escalera', title_pt:'Escada', floor:'Ground Floor', img:IMG.escada,
+    { id:'rooms1415', num:'03', title:'Rooms 14 & 15 — Ground Floor', title_es:'Habitaciones 14 y 15', title_pt:'Quartos 14 e 15', floor:'Ground Floor', img:IMG.rooms1415,
       hotspots:[
-        {target:'hall',     label:'Down to the hall',    yaw:1.2, pitch:0.20},
-        {target:'corredor', label:'To the corridor',    yaw:1.8, pitch:0.05}
+        {target:'hall',   label:'Back to the hall', yaw:1.2, pitch:0.05},
+        {target:'stairs', label:'Up the stairs',    yaw:-1.5, pitch:0.10}
       ] },
 
-    { id:'corredor', num:'04', title:'Corridor & Bathroom', title_es:'Pasillo y baño', title_pt:'Corredor e banheiro', floor:'First Floor', img:IMG.corredor,
+    { id:'stairs',    num:'04', title:'Stairs & Hall — First Floor', title_es:'Escalera y pasillo', title_pt:'Escada e hall', floor:'First Floor', img:IMG.stairs,
       hotspots:[
-        {target:'escada',   label:'Back to the stairs',   yaw:-2.8, pitch:0.05},
-        {target:'cozinha1', label:'To the kitchen',      yaw:0.2, pitch:0.05}
+        {target:'rooms1415', label:'Downstairs',        yaw:1.2, pitch:0.20},
+        {target:'rooms1617', label:'Rooms 16 & 17',     yaw:-1.5, pitch:0.05}
       ] },
 
-    { id:'cozinha1', num:'05', title:'Kitchen & Dining', title_es:'Cocina y comedor', title_pt:'Cozinha e sala de jantar', floor:'First Floor', img:IMG.cozinha1,
+    { id:'rooms1617', num:'05', title:'Rooms 16 & 17 — Bathroom 2', title_es:'Habitaciones 16 y 17 — Baño 2', title_pt:'Quartos 16 e 17 — Banheiro 2', floor:'First Floor', img:IMG.rooms1617,
       hotspots:[
-        {target:'corredor', label:'Back to the corridor', yaw:-2.6, pitch:0.05},
-        {target:'cozinha2', label:'See the worktop',       yaw:0.6, pitch:0.05}
+        {target:'stairs',    label:'Back to the stairs', yaw:2.6, pitch:0.05},
+        {target:'rooms1819', label:'Rooms 18 & 19',      yaw:0.2, pitch:0.05}
       ] },
 
-    { id:'cozinha2', num:'06', title:'Kitchen — Worktop', title_es:'Cocina — encimera', title_pt:'Cozinha — bancada', floor:'First Floor', img:IMG.cozinha2,
+    { id:'rooms1819', num:'06', title:'Rooms 18 & 19 — Corridor', title_es:'Habitaciones 18 y 19', title_pt:'Quartos 18 e 19', floor:'First Floor', img:IMG.rooms1819,
       hotspots:[
-        {target:'cozinha1', label:'Back to the table',       yaw:2.4, pitch:0.05}
+        {target:'rooms1617', label:'Back to rooms 16 & 17', yaw:2.4, pitch:0.05},
+        {target:'bath_sf',   label:'To the bathroom',       yaw:0.2, pitch:0.05}
+      ] },
+
+    { id:'bath_sf',   num:'07', title:'Bathroom 3 — Corridor', title_es:'Baño 3 — pasillo', title_pt:'Banheiro 3 — corredor', floor:'First Floor', img:IMG.bath_sf,
+      hotspots:[
+        {target:'rooms1819', label:'Back to the corridor', yaw:2.4, pitch:0.05},
+        {target:'kitchen1',  label:'To the kitchen',       yaw:0.2, pitch:0.05}
+      ] },
+
+    { id:'kitchen1',  num:'08', title:'Kitchen — Worktop & Table', title_es:'Cocina — encimera y mesa', title_pt:'Cozinha — bancada e mesa', floor:'First Floor', img:IMG.kitchen1,
+      hotspots:[
+        {target:'bath_sf',  label:'Back to the bathroom', yaw:2.4, pitch:0.05},
+        {target:'kitchen2', label:'More of the kitchen',  yaw:0.4, pitch:0.05}
+      ] },
+
+    { id:'kitchen2',  num:'09', title:'Kitchen', title_es:'Cocina', title_pt:'Cozinha', floor:'First Floor', img:IMG.kitchen2,
+      hotspots:[
+        {target:'kitchen1', label:'Back to worktop & table', yaw:2.4, pitch:0.05},
+        {target:'kitchen3', label:'Laundry area',            yaw:0.4, pitch:0.05}
+      ] },
+
+    { id:'kitchen3',  num:'10', title:'Kitchen & Laundry', title_es:'Cocina y lavandería', title_pt:'Cozinha e lavanderia', floor:'First Floor', img:IMG.kitchen3,
+      hotspots:[
+        {target:'kitchen2', label:'Back to the kitchen', yaw:0.4, pitch:0.05}
       ] }
   ];
 
@@ -277,8 +306,8 @@ window.SCENE_IMAGES = {
   });
 
   // esconde loader quando a primeira cena estiver pronta
-  scenes['entrada'].scene.switchTo();
-  switchTo('entrada');
+  scenes['entrance'].scene.switchTo();
+  switchTo('entrance');
   setTimeout(function(){
     var l=document.getElementById('loader'); l.style.opacity='0';
     setTimeout(function(){ l.style.display='none'; }, 500);
